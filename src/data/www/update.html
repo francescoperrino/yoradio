@@ -7,7 +7,7 @@
   <link rel="apple-touch-icon" type="image/png" href="elogo.png">
   <link rel="icon" type="image/png" href="elogo.png">
   <link rel="stylesheet" title="base" href="style.css?%VERSION%" type="text/css">
-  <title>ёRadio - Update</title>
+  <title>yoRadio - Aggiorna</title>
   <style>
   </style>
   </head>
@@ -16,7 +16,7 @@
     <div class="logo"></div>
     <div class="playerwrap">
       <div class="player" id="uploaderwrap">
-        <div id="uploadstatus">Please choose firmware or SPIFFS *.bin file</div>
+        <div id="uploadstatus">Seleziona il firmware o il file SPIFFS *.bin</div>
         <form id="updateform" method="POST" action="/update" enctype="multipart/form-data">
           <div class="row">
             <label for="uploadtype1"><input type="radio" id="uploadtype1" name="updatetarget" value="fw" checked /><span class="checkmark"></span> firmware</label>
@@ -28,10 +28,10 @@
           </div>
         </form>
         <progress id="updateprogress" max="100" value="70" hidden></progress>
-        <a href="/" class="button" id="update_cancel_button">Cancel</a>
+        <a href="/" class="button" id="update_cancel_button">Cancella</a>
       </div><!--player-->
     </div><!--playerwrap-->
-    <div id="copy">powered by <a target="_blank" href="https://github.com/e2002/yoradio/">ёRadio</a> | v%VERSION%</div>
+    <div id="copy">Fornito da <a target="_blank" href="https://github.com/e2002/yoradio/">ёRadio</a> | v%VERSION%</div>
   </div>
   <script src="script.js?%VERSION%"></script>
 </body>

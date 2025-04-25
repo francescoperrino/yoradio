@@ -47,13 +47,13 @@ CONF_ROOT_TOPIC = 'root_topic'
 MEDIA_PLAYER_PLATFORM_SCHEMA = MEDIA_PLAYER_PLATFORM_SCHEMA.extend({
   vol.Required(CONF_ROOT_TOPIC, default="yoradio"): cv.string,
   vol.Optional(CONF_NAME, default=DEFAULT_NAME): cv.string,
-  vol.Optional(CONF_MAX_VOLUME, default='254'): cv.string
+  vol.Optional(CONF_MAX_VOLUME, default='100'): cv.string
 })
 
 def setup_platform(hass, config, add_devices, discovery_info=None):
   root_topic = config.get(CONF_ROOT_TOPIC)
   name = config.get(CONF_NAME)
-  max_volume = int(config.get(CONF_MAX_VOLUME, 254))
+  max_volume = int(config.get(CONF_MAX_VOLUME, 100))
   playlist = []
   api = yoradioApi(root_topic, hass, playlist)
   add_devices([yoradioDevice(name, max_volume, api)], True)
